@@ -1,24 +1,22 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class next_level_script : MonoBehaviour
 {
+    public LeaderboardService leaderboardService;
+
     private UIDocument document;
     private Button button;
     private Label nameLabel;
 
-    private void Awake()
+    private async void Awake()
     {
+        LeaderboardService.PlayerScore playerScore = LeaderboardService.GetCurrentPlayerScore();
         var root = GetComponent<UIDocument>().rootVisualElement;
         nameLabel = root.Q<Label>("playerNameLabel");
-        string playerName = PlayerPrefs.GetString("PLAYER_NAME", "Player");
-        int coinsCollected = 0;
-        if (PlayerData.Instance != null)
-        {
-            coinsCollected = PlayerData.Instance.score;
-        }
-        nameLabel.text = $"{playerName} helped the borb collect {coinsCollected} coin{(coinsCollected != 1 ? "s" : "")}, but it’s not enough, so let’s fly to another city.";
+        nameLabel.text = $"{playerScore.playerName} helped the borb collect {playerScore.score} coin{(playerScore.score != 1 ? "s" : "")}, but it’s not enough, so let’s fly to another city.";
+        await leaderboardService.UpdateLeaderboardAsync(playerScore);
     }
 
     private void OnEnable()

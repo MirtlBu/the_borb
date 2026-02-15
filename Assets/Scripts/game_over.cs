@@ -1,17 +1,21 @@
 using UnityEngine;
-using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 
 public class game_over : MonoBehaviour
 {
+    public LeaderboardService leaderboardService;
+
     private UIDocument document;
     private Button button;
-   private void OnEnable()
+    private async void OnEnable()
     {
         document = GetComponent<UIDocument>();
         button = document.rootVisualElement.Q<Button>("continue");
         button.RegisterCallback<ClickEvent>(OnPlayGameClick);
+
+        await leaderboardService.UpdateLeaderboardAsync(LeaderboardService.GetCurrentPlayerScore());
     }
 
     private void OnDisable()
