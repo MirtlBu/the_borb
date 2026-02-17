@@ -7,7 +7,7 @@ public class WavesMove : MonoBehaviour
     void Update()
     {
        float rotationSpeed = 360f;
-       transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime / 5);
+       transform.Rotate(0f, 0f, rotationSpeed * Time.deltaTime / 8);
         
     }
 }
