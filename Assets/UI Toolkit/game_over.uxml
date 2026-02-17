@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/Scripts/main_menu.uss?fileID=7433441132597879392&amp;guid=02524805e6b80449c902084b1bacfb4e&amp;type=3#main_menu"/>
     <ui:VisualElement name="VisualElement" style="flex-grow: 1; -unity-text-align: upper-center; align-self: center; align-content: center; justify-content: center; align-items: center; background-color: rgba(20, 40, 64, 0); width: 100%; border-left-color: rgba(0, 0, 0, 0); border-right-color: rgba(0, 0, 0, 0); border-top-color: rgba(0, 0, 0, 0); border-bottom-color: rgba(0, 0, 0, 0);">
         <ui:VisualElement name="VisualElement" style="flex-grow: 1; height: auto; min-height: 60%; align-items: center; justify-content: center; align-self: center; align-content: center; max-height: 60%;"/>
-        <ui:Label text="The bord was defeated, but he doesn’t give up." class="h1" style="font-size: 48px;"/>
+        <ui:Label text="The borb was defeated, but he doesn’t give up." class="h1" style="font-size: 48px;"/>
         <ui:Button text="Continue" name="continue" class="button"/>
     </ui:VisualElement>
 </ui:UXML>

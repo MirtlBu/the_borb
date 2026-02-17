@@ -864,7 +864,7 @@ MonoBehaviour:
   checkRadius: 0.5
   buildingLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
 --- !u!4 &1113859649
 Transform:
   m_ObjectHideFlags: 0
@@ -1255,7 +1255,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4209461767521648114, guid: aa0500f438b5b469fb52ed32acb4a684, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

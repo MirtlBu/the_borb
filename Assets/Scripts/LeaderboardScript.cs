@@ -8,6 +8,8 @@ public class Leaderboard : MonoBehaviour
 {
     public LeaderboardService leaderboardService;
     public Label scoreList;
+    private UIDocument document;
+    private Button button;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     async void Start()
@@ -24,9 +26,19 @@ public class Leaderboard : MonoBehaviour
         scoreList.text = sb.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
+        document = GetComponent<UIDocument>();
+        button = document.rootVisualElement.Q<Button>("back");
+        button.RegisterCallback<ClickEvent>(OnBackClick);
+    }
+    private void OnDisable()
+    {
+        button?.UnregisterCallback<ClickEvent>(OnBackClick);
+    }
 
+    private void OnBackClick(ClickEvent evt)
+    {
+        SceneController.Instance.LoadMainMenu();
     }
 }

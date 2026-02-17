@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Networking;
 
 
 public class LeaderboardService : MonoBehaviour
@@ -49,13 +50,19 @@ public class LeaderboardService : MonoBehaviour
         {
             Debug.Log("Requesting leaderboard...");
 
-            HttpResponseMessage response = await httpClient.GetAsync(leaderboardUrl);
-            response.EnsureSuccessStatusCode();
+            using UnityWebRequest request = UnityWebRequest.Get(leaderboardUrl);
+            var operation = request.SendWebRequest();
+            while (!operation.isDone)
+                await Task.Yield();
 
-            string json = await response.Content.ReadAsStringAsync();
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"Leaderboard request failed: {request.error}");
+                return new List<PlayerScore>();
+            }
 
-            LeaderboardResponse result =
-                JsonUtility.FromJson<LeaderboardResponse>(json);
+            string json = request.downloadHandler.text;
+            LeaderboardResponse result = JsonUtility.FromJson<LeaderboardResponse>(json);
 
             return result.leaderboard;
         }
@@ -73,9 +80,22 @@ public class LeaderboardService : MonoBehaviour
             Debug.Log("Updating leaderboard...");
 
             string json = JsonUtility.ToJson(playerScore);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-            HttpResponseMessage response = await httpClient.PostAsync(leaderboardUrl, content);
-            response.EnsureSuccessStatusCode();
+            byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
+
+            using UnityWebRequest request = new UnityWebRequest(leaderboardUrl, UnityWebRequest.kHttpVerbPOST);
+            request.uploadHandler = new UploadHandlerRaw(jsonBytes);
+            request.downloadHandler = new DownloadHandlerBuffer();
+            request.SetRequestHeader("Content-Type", "application/json");
+
+            var operation = request.SendWebRequest();
+            while (!operation.isDone)
+                await Task.Yield();
+
+            if (request.result != UnityWebRequest.Result.Success)
+            {
+                Debug.LogError($"Leaderboard update failed: {request.error}");
+                return false;
+            }
 
             return true;
         }
