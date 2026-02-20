@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: bottle_shine
-  m_Shader: {fileID: -6465566751694194690, guid: 748fe761920754cd4a91bb515432da95, type: 3}
+  m_Name: comet_core
+  m_Shader: {fileID: -6465566751694194690, guid: c31cee65ae0f14facba0f5fd526eafdf, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -23,6 +23,18 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_4a71499213c3472aad8d2d9310beb5ff_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: e8d892d9142314667a001ddca321c7c2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_7e5eadfa6a444ed083c9886d1d040c64_Texture_1_Texture2D:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texture:
+        m_Texture: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -39,9 +51,12 @@ Material:
     m_Floats: []
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
+    - _Color1: {r: 0.0946716, g: 7.643089, b: 7.0507846, a: 1}
+    - _Color2: {r: 1.331453, g: 4.707638, b: 4.51743, a: 1}
+    - _speed: {r: 0.5, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &6483798279200349686
+--- !u!114 &8756688345926455936
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 521f1e3abd3724c1fa999e80f671fb70
+guid: e8d892d9142314667a001ddca321c7c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2506687976236954703
-    second: kupla_0
+      213: 9182157284707403512
+    second: Untitled-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: kupla_0
+      name: Untitled-1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 238
-        height: 224
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f44b852fe6b89c220800000000000000
-      internalID: 2506687976236954703
+      spriteID: 8f600cab6639d6f70800000000000000
+      internalID: 9182157284707403512
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      kupla_0: 2506687976236954703
+      Untitled-1_0: 9182157284707403512
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
