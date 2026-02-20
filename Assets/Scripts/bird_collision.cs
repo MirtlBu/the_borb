@@ -66,7 +66,6 @@ public class BirdCollision : MonoBehaviour
             if (buildingCounter == powerUpSpawnAt && powerUpSpawner != null && !powerUpSpawner.HasSpawned)
             {
                 powerUpSpawner.TrySpawnPowerUp();
-                Debug.Log("Power-up spawned at building " + buildingCounter);
             }
         }
     }

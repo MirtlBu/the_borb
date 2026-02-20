@@ -6,6 +6,10 @@ public class PlayerData : MonoBehaviour
 
     public string playerName;
     public int score;
+    public void ResetData()
+    {
+        score = 0;
+    }
 
     private void Awake()
     {

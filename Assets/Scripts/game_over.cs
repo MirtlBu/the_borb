@@ -25,6 +25,10 @@ public class game_over : MonoBehaviour
 
     private void OnPlayGameClick(ClickEvent evt)
     {
-        SceneManager.LoadScene("level");
+        if (PlayerData.Instance != null)
+    {
+        PlayerData.Instance.ResetData();
+    }
+        SceneController.Instance.LoadMainMenu();
     }
 }
