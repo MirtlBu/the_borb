@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class buildingsLoop : MonoBehaviour
+public class TreesLoop : MonoBehaviour
 {
     private GameSpeed gameSpeed;
 
@@ -17,7 +17,7 @@ public class buildingsLoop : MonoBehaviour
 
     void Update()
     {
-        transform.position += Vector3.left * gameSpeed.speed / 5 * Time.deltaTime;
+        transform.position += Vector3.left * gameSpeed.speed / 3 * Time.deltaTime;
 
         float leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero).x;
 
@@ -37,7 +37,6 @@ public class buildingsLoop : MonoBehaviour
     {
         Vector3 newPos = transform.position;
         newPos.x += spriteWidth;
-
         Instantiate(gameObject, newPos, Quaternion.identity);
     }
 }

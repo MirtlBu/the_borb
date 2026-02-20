@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: c7c394e9e9084466a92381fa69ed5613
+guid: ba00d7c7e66b0442e8646dcfe6a70445
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8084173116391918963
-    second: stack_0
+      213: 8287873616420496286
+    second: clouds_0
   - first:
-      213: -2881746212815275564
-    second: stack_1
+      213: 7911139459876737251
+    second: clouds_1
   - first:
-      213: 4807145483111001770
-    second: stack_2
+      213: -1115256706364395465
+    second: clouds_2
   - first:
-      213: 3435953126877232949
-    second: stack_3
+      213: -477254976604553037
+    second: clouds_3
+  - first:
+      213: 5291327898690728900
+    second: clouds_4
+  - first:
+      213: -8294918184612582425
+    second: clouds_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,7 +61,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -122,89 +128,133 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: stack_0
+      name: clouds_0
       rect:
         serializedVersion: 2
-        x: 120
-        y: 185
-        width: 2690
-        height: 979
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 350
+        width: 12153
+        height: 2000
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8272b6e16f3fcf80800000000000000
-      internalID: -8084173116391918963
+      spriteID: e936312a421740370800000000000000
+      internalID: 8287873616420496286
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stack_1
+      name: clouds_1
       rect:
         serializedVersion: 2
-        x: 1955
-        y: 894
-        width: 1731
-        height: 878
+        x: 2677
+        y: 1271
+        width: 2217
+        height: 967
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4d9715c661bf108d0800000000000000
-      internalID: -2881746212815275564
+      spriteID: 3e0578a7c630acd60800000000000000
+      internalID: 7911139459876737251
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stack_2
+      name: clouds_2
       rect:
         serializedVersion: 2
-        x: 2808
-        y: 99
-        width: 1754
-        height: 797
+        x: 7153
+        y: 1056
+        width: 1378
+        height: 699
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aae6478f85966b240800000000000000
-      internalID: 4807145483111001770
+      spriteID: 73037c73fefc580f0800000000000000
+      internalID: -1115256706364395465
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: stack_3
+      name: clouds_3
       rect:
         serializedVersion: 2
-        x: 3890
-        y: 894
-        width: 2786
-        height: 1214
+        x: 8376
+        y: 1386
+        width: 2217
+        height: 967
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53ff8681a25feaf20800000000000000
-      internalID: 3435953126877232949
+      spriteID: 3b0c23c90237069f0800000000000000
+      internalID: -477254976604553037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clouds_4
+      rect:
+        serializedVersion: 2
+        x: 4663
+        y: 423
+        width: 1397
+        height: 635
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c3339f60b29e6940800000000000000
+      internalID: 5291327898690728900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clouds_5
+      rect:
+        serializedVersion: 2
+        x: 9521
+        y: 475
+        width: 2142
+        height: 780
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7eb2d350cd782ec80800000000000000
+      internalID: -8294918184612582425
       vertices: []
       indices: 
       edges: []
@@ -213,7 +263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 7cdfc4e2ddcd8465d9a10037d5604384
     internalID: 0
     vertices: []
     indices: 
@@ -223,10 +273,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      stack_0: -8084173116391918963
-      stack_1: -2881746212815275564
-      stack_2: 4807145483111001770
-      stack_3: 3435953126877232949
+      clouds_0: 8287873616420496286
+      clouds_1: 7911139459876737251
+      clouds_2: -1115256706364395465
+      clouds_3: -477254976604553037
+      clouds_4: 5291327898690728900
+      clouds_5: -8294918184612582425
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
