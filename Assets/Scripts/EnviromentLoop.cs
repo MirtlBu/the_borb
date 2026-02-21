@@ -1,7 +1,11 @@
 using UnityEngine;
 
-public class CloudLooper : MonoBehaviour{
+public class EnviromentLoop : MonoBehaviour
+{
     private GameSpeed gameSpeed;
+
+    [Header("Parallax Settings")]
+    [SerializeField] private float speedDivider = 3f;  // ← теперь можно менять в инспекторе
 
     private SpriteRenderer sr;
     private float spriteWidth;
@@ -16,7 +20,8 @@ public class CloudLooper : MonoBehaviour{
 
     void Update()
     {
-        transform.position += Vector3.left * gameSpeed.speed / 10 * Time.deltaTime;
+        // Движение зависит от GameSpeed, но делитель теперь настраиваемый
+        transform.position += Vector3.left * (gameSpeed.speed / speedDivider) * Time.deltaTime;
 
         float leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero).x;
 
@@ -36,7 +41,6 @@ public class CloudLooper : MonoBehaviour{
     {
         Vector3 newPos = transform.position;
         newPos.x += spriteWidth;
-
         Instantiate(gameObject, newPos, Quaternion.identity);
     }
 }
